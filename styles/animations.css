@@ -1,0 +1,4 @@
+.menu-nav-list-item:hover{
+    text-shadow: 0px 0px 20px rgb(18,180,15);
+    transition-duration: .7s;
+}

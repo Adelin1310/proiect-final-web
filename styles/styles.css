@@ -1,0 +1,53 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #FC5130;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    border-bottom: 3px solid #FBF5F3;
+}
+.menu-logo{
+    height: min-content;
+    font-family: 'Monoton', cursive;
+    font-size: xx-large;
+    margin: auto;
+    margin-left: 2rem;
+    color: #FC5130;
+}
+.menu-nav-list{
+    margin: auto;
+    margin-right: 3rem;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    height: min-content;
+    font-family: 'Bebas Neue', cursive;
+}
+.menu-nav-list-item{
+    margin: auto;
+    padding: auto;
+}
+.menu-nav-list-item>a{
+    color: #FBF5F3;
+    font-size: x-large;
+    margin: auto 1rem;
+}
+.news{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    margin: .25rem auto;
+    border-top: 3px solid #FBF5F3;
+    border-bottom: 3px solid #FBF5F3;
+}
