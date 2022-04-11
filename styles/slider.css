@@ -3,7 +3,7 @@
 .news-slider {
   margin: 1rem auto;
   max-width: 50%;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
