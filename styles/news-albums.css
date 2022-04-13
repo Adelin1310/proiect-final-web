@@ -1,0 +1,12 @@
+.news-albums {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.news-albums-heading {
+    color: #FC5130;
+    font-weight: 600;
+    margin-bottom: 0;
+}

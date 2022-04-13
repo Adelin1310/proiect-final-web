@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/news-albums.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
@@ -30,30 +31,36 @@
     </section>
     <section class="news">
         <div class="news-slider">
-            <?php
-            $query = "SELECT * FROM dbo_album";
-            $albums = mysqli_query($conexiune, $query) or die('Eroare');
-            while ($row = mysqli_fetch_assoc($albums)) {
-                echo  "<div class='news-slider-slide fade'>";
-                echo  "<img class='news-slider-slide-image' src='data:image/jpeg;base64, " . base64_encode($row['CoverImage']) . "'/>";
-                echo  "<div class='news-slider-slide-text'><p style='color:white'>" . $row['Description'] . "</p></div>";
-                echo  "</div>";
-            }
+            <h1 class="news-slider-heading">News</h1>
+            <?php 
+                $query = "SELECT * FROM dbo_article";
+                $article = mysqli_query($conexiune, $query) or die('Eroare');
+                while($row = mysqli_fetch_assoc($article)){
+                    echo  "<div class='news-slider-slide fade'>";
+                    echo  "<img class='news-slider-slide-image' src='data:image/jpeg;base64, ".base64_encode($row['CoverImage'])."'/>";
+                    echo  "<div class='news-slider-slide-text'><p style='color:white'>".$row['Heading']."</p></div>";
+                    echo  "<div class='news-slider-slide-link'><a href";
+                    echo  "</div>";
+                }
+
             ?>
             <div class="news-slider-sliders">
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <div class="news-slider-dots" style="text-align:center">
-                <?php
-                for ($i = 0; $i < $albums->num_rows; $i++) {
-                    echo "<span class='dot' onclick='currentSlide(" . ($i + 1) . ")'></span>";
+            <?php
+                for($i = 0; $i < $article->num_rows; $i++){
+                    echo "<span class='dot' onclick='currentSlide(".($i+1).")'></span>";
                 }
                 ?>
             </div>
         </div>
         <div class="news-albums">
+                <h1 class="news-albums-heading">Latest Albums</h1>
+                <div class="news-album">
 
+                </div>
         </div>
 
     </section>
