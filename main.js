@@ -1,6 +1,6 @@
 let slideIndex = 1;
-window.onload = () => {
-  showSlides(slideIndex);
+window.onload = async () => {
+  await showSlides(slideIndex);
 };
 
 // Next/previous controls
@@ -13,7 +13,7 @@ function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 
-function showSlides(n) {
+async function showSlides(n) {
   let i;
   let slides = document.querySelectorAll("div.news-slider-slide.fade");
   let dots = document.getElementsByClassName("dot");

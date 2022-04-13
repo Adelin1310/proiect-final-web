@@ -30,29 +30,26 @@
     </section>
     <section class="news">
         <div class="news-slider">
-            <?php 
-                $query = "SELECT * FROM dbo_album";
-                $albums = mysqli_query($conexiune, $query) or die('Eroare');
-                while($row = mysqli_fetch_assoc($albums)){
-                    echo  "<div class='news-slider-slide fade'>";
-                    echo  "<img class='news-slider-slide-image' src='data:image/jpeg;base64, ".base64_encode($row['CoverImage'])."'/>";
-                    echo  "<div class='news-slider-slide-text'><p style='color:white'>".$row['Description']."</p></div>";
-                    echo  "</div>";
-
-                }
-
+            <?php
+            $query = "SELECT * FROM dbo_album";
+            $albums = mysqli_query($conexiune, $query) or die('Eroare');
+            while ($row = mysqli_fetch_assoc($albums)) {
+                echo  "<div class='news-slider-slide fade'>";
+                echo  "<img class='news-slider-slide-image' src='data:image/jpeg;base64, " . base64_encode($row['CoverImage']) . "'/>";
+                echo  "<div class='news-slider-slide-text'><p style='color:white'>" . $row['Description'] . "</p></div>";
+                echo  "</div>";
+            }
             ?>
-            
             <div class="news-slider-sliders">
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <div class="news-slider-dots" style="text-align:center">
-            <?php 
-                for($i = 0; $i < $albums->num_rows; $i++){
-                    echo "<span class='dot' onclick='currentSlide(".($i+1).")'></span>";
+                <?php
+                for ($i = 0; $i < $albums->num_rows; $i++) {
+                    echo "<span class='dot' onclick='currentSlide(" . ($i + 1) . ")'></span>";
                 }
-            ?>
+                ?>
             </div>
         </div>
         <div class="news-albums">
