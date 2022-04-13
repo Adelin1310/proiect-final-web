@@ -46,7 +46,7 @@ a{
 .news{
     display: flex;
     justify-content: space-evenly;
-    background-color: transparent;
+    background-color: black;
     margin: .25rem auto;
     border-top: 3px solid #FBF5F3;
     border-bottom: 3px solid #FBF5F3;

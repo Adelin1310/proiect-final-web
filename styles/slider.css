@@ -98,7 +98,6 @@
 .active, .dot:hover {
   border: 2px solid #FC5130;
 }
-
 /* Fading animation */
 .fade {
   animation-name: fade;

@@ -36,10 +36,11 @@
                 $query = "SELECT * FROM dbo_article";
                 $article = mysqli_query($conexiune, $query) or die('Eroare');
                 while($row = mysqli_fetch_assoc($article)){
+                    $article_link = "<a class='article-link' href='article.php?article_id=".$row['ArticleId']."'>";
                     echo  "<div class='news-slider-slide fade'>";
-                    echo  "<img class='news-slider-slide-image' src='data:image/jpeg;base64, ".base64_encode($row['CoverImage'])."'/>";
+                    echo  $article_link."<img class='news-slider-slide-image' src='data:image/jpeg;base64, ".base64_encode($row['CoverImage'])."'/>";
                     echo  "<div class='news-slider-slide-text'><p style='color:white'>".$row['Heading']."</p></div>";
-                    echo  "<div class='news-slider-slide-link'><a href";
+                    echo   $article_link;
                     echo  "</div>";
                 }
 
