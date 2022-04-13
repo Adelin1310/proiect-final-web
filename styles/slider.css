@@ -7,6 +7,11 @@
   flex-direction: column;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.news-slider-heading{
+  color:#FC5130;
+  font-weight: 600;
+  margin-bottom: 0;
+}
 
 /* Hide the images by default */
 .news-slider-slide {

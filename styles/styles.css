@@ -45,8 +45,8 @@ a{
 }
 .news{
     display: flex;
-    justify-content: space-between;
-    background-color: black;
+    justify-content: space-evenly;
+    background-color: transparent;
     margin: .25rem auto;
     border-top: 3px solid #FBF5F3;
     border-bottom: 3px solid #FBF5F3;
